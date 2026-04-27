@@ -1,0 +1,45 @@
+<svg width="1200" height="860" viewBox="0 0 1200 860" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="860" rx="42" fill="#0C0F14"/>
+  <rect x="42" y="42" width="1116" height="776" rx="34" fill="url(#bg)"/>
+  <circle cx="592" cy="470" r="180" fill="url(#core)"/>
+  <path d="M594 238L694 320L726 450L650 584L514 626L406 546L386 404L470 282L594 238Z" fill="url(#gem1)"/>
+  <path d="M596 270L666 340L690 446L636 546L534 584L454 532L434 430L480 328L596 270Z" fill="url(#gem2)"/>
+  <path d="M598 306L642 360L660 440L626 504L548 534L490 496L476 430L506 358L598 306Z" fill="url(#gem3)"/>
+  <rect x="96" y="110" width="182" height="16" rx="8" fill="#1C2430"/>
+  <rect x="96" y="154" width="302" height="96" rx="16" fill="#0E141D"/>
+  <path d="M124 186H252" stroke="#FF814D" stroke-width="18" stroke-linecap="round"/>
+  <path d="M124 220H336" stroke="#E7E8EA" stroke-opacity="0.16" stroke-width="12" stroke-linecap="round"/>
+  <path d="M124 244H268" stroke="#E7E8EA" stroke-opacity="0.16" stroke-width="12" stroke-linecap="round"/>
+  <rect x="94" y="694" width="168" height="48" rx="24" stroke="#FF814D" stroke-width="2"/>
+  <path d="M1020 138L1088 194L1100 280L1050 352L966 376L890 326L874 246L920 176L1020 138Z" fill="#111720"/>
+  <circle cx="998" cy="264" r="64" fill="url(#spark)"/>
+  <defs>
+    <linearGradient id="bg" x1="84" y1="64" x2="1094" y2="780" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#11151B"/>
+      <stop offset="1" stop-color="#181D25"/>
+    </linearGradient>
+    <radialGradient id="core" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(592 470) rotate(90) scale(180)">
+      <stop stop-color="#FFCB96"/>
+      <stop offset="0.38" stop-color="#D17137"/>
+      <stop offset="1" stop-color="#2A1D1A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gem1" x1="420" y1="252" x2="704" y2="628" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFD5A9"/>
+      <stop offset="0.44" stop-color="#FF8B4A"/>
+      <stop offset="1" stop-color="#2B221F"/>
+    </linearGradient>
+    <linearGradient id="gem2" x1="440" y1="290" x2="678" y2="574" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1F2430"/>
+      <stop offset="0.5" stop-color="#7C4C30"/>
+      <stop offset="1" stop-color="#131822"/>
+    </linearGradient>
+    <linearGradient id="gem3" x1="476" y1="312" x2="652" y2="536" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFD8BA"/>
+      <stop offset="1" stop-color="#1A1514"/>
+    </linearGradient>
+    <radialGradient id="spark" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(998 264) rotate(90) scale(64)">
+      <stop stop-color="#FF8B4A"/>
+      <stop offset="1" stop-color="#FF8B4A" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>

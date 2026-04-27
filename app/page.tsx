@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ScrollEffects } from "@/components/scroll-effects";
 
 const services = [
@@ -23,16 +24,19 @@ const projects = [
     title: "Lewis",
     type: "Brand platform",
     blurb: "A dark editorial launch page wrapped around a molten 3D object.",
+    image: "/projects/lewis.svg",
   },
   {
     title: "Finaco",
     type: "Finance dashboard",
     blurb: "Data-rich product visuals with glassmorphism and spatial navigation.",
+    image: "/projects/finaco.svg",
   },
   {
     title: "Focus",
     type: "Productivity app",
     blurb: "A calmer interface that still feels alive through micro-depth and glow.",
+    image: "/projects/focus.svg",
   },
 ];
 
@@ -212,9 +216,13 @@ export default function Home() {
               <h3>{project.title}</h3>
               <p>{project.blurb}</p>
               <div className="project-art">
-                <div className="screen screen-a" />
-                <div className="screen screen-b" />
-                <div className="screen screen-c" />
+                <Image
+                  src={project.image}
+                  alt={`${project.title} preview`}
+                  fill
+                  sizes="(max-width: 980px) 100vw, (max-width: 1180px) 60vw, 40vw"
+                  className="project-image"
+                />
               </div>
             </article>
           ))}
