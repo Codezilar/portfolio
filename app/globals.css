@@ -68,6 +68,14 @@ a {
   padding: 1.25rem 0 0;
 }
 
+.topbar-wrap {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  padding-bottom: 0.75rem;
+  backdrop-filter: blur(18px);
+}
+
 .brand,
 .nav,
 .socials,
@@ -92,6 +100,136 @@ a {
   gap: 1.1rem;
   color: var(--muted);
   font-size: 0.78rem;
+}
+
+.mobile-toggle,
+.mobile-nav-panel {
+  display: none;
+}
+
+.mobile-toggle {
+  position: relative;
+  width: 3.25rem;
+  height: 3.25rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02)),
+    rgba(24, 26, 33, 0.88);
+  box-shadow: var(--shadow);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.mobile-toggle span {
+  position: absolute;
+  width: 1rem;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  transition: transform 220ms ease, opacity 220ms ease;
+}
+
+.mobile-toggle span:nth-child(1) {
+  transform: translateY(-6px);
+}
+
+.mobile-toggle span:nth-child(3) {
+  transform: translateY(6px);
+}
+
+.mobile-toggle.is-open span:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.mobile-toggle.is-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-toggle.is-open span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+.mobile-nav-panel {
+  margin-top: 0.75rem;
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition:
+    max-height 280ms ease,
+    opacity 220ms ease,
+    transform 220ms ease;
+}
+
+.mobile-nav-panel.is-open {
+  max-height: 24rem;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mobile-nav,
+.mobile-socials {
+  display: grid;
+  gap: 0.8rem;
+  padding: 1.15rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.02)),
+    rgba(24, 26, 33, 0.9);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
+}
+
+.mobile-nav a,
+.mobile-socials span {
+  font-family: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.mobile-nav a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 3rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 18px;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.02);
+  transition: transform 200ms ease, border-color 200ms ease, color 200ms ease;
+}
+
+.mobile-nav a::after {
+  content: "+";
+  color: var(--accent);
+}
+
+.mobile-nav a:hover {
+  transform: translateY(-2px);
+  border-color: rgba(93, 255, 182, 0.32);
+  color: var(--text);
+}
+
+.mobile-socials {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 0.75rem;
+}
+
+.mobile-socials span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.02);
 }
 
 .hero {
@@ -814,11 +952,14 @@ blockquote {
     padding-top: 1rem;
   }
 
-  .nav,
-  .socials {
-    width: 100%;
-    overflow-x: auto;
-    padding-bottom: 0.25rem;
+  .nav-desktop,
+  .socials-desktop {
+    display: none;
+  }
+
+  .mobile-toggle,
+  .mobile-nav-panel {
+    display: flex;
   }
 
   .hero {
@@ -863,6 +1004,11 @@ blockquote {
 @media (max-width: 420px) {
   .section {
     width: calc(100vw - 0.8rem);
+  }
+
+  .mobile-nav,
+  .mobile-socials {
+    padding: 0.9rem;
   }
 
   .hero {

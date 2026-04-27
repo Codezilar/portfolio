@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Header } from "@/components/header";
 import { ScrollEffects } from "@/components/scroll-effects";
 
 const services = [
@@ -87,19 +88,7 @@ export default function Home() {
       <div className="ambient ambient-b" />
       <div className="grid-glow" />
 
-      <header className="topbar section">
-        <div className="brand">Daniel Stephan</div>
-        <nav className="nav">
-          <a href="#services">Services</a>
-          <a href="#works">Works</a>
-          <a href="#notes">Notes</a>
-          <a href="#contact">Contact</a>
-        </nav>
-        <div className="socials">
-          <span>Twitter</span>
-          <span>GitHub</span>
-        </div>
-      </header>
+      <Header />
 
       <section className="hero section" data-reveal>
         <div className="hero-copy">
@@ -168,7 +157,7 @@ export default function Home() {
         </div>
         <div className="intro-copy" data-reveal>
           <span className="kicker">Overview</span>
-          <h2>Hello! I&apos;m Daniel Stephan</h2>
+          <h2>Hello! I&apos;m Goodness Christopher</h2>
           <p className="lead">
             Every great design begins with an even better story.
           </p>
